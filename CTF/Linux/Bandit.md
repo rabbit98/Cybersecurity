@@ -138,5 +138,23 @@ HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 >Command 
 ```bash    
 ssh bandit7@bandit.labs.overthewire.org -p 2220
-ls
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null -exec cat {} \;
+```
+![alt text](image-3.png)
 
+Explination : 
+- find / → search the entire filesystem
+- type f → only regular files
+- user bandit7 → owned by user bandit7
+- group bandit6 → owned by group bandit6
+- size 33c → exactly 33 bytes (c = bytes)
+- 2>/dev/null → hides permission denied errors (important)
+- exec cat {} \; → prints the file contents (the password)
+
+password : 
+```bash 
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+``` 
+## level 7 to level 8
+>Command 
+```bash 
