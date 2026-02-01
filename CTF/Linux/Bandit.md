@@ -45,5 +45,14 @@ Password : 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 
 Level 4 - 5 : 
 
+Command : 
+ls
+- found inhere directory 
+- to open a directory use "cd"
+- then 'ls -a' for all files including hidden files and found '...Hiding-From-You'
+cat ./...Hiding-From-You 
+- this will open the folder
+Password : 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
 
 
