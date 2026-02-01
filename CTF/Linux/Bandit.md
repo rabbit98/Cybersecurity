@@ -108,3 +108,35 @@ password :
 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 ```
 ## level 5 to level 6
+>Command 
+```bash    
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+ls
+find . -type f ! -executable -size 1033c -exec file {} \; | grep 'ASCII' | cut -d: -f1 | xargs cat
+```
+![alt text](image-2.png)
+
+Explination :
+- ls is for list
+- cd is for change directory
+- find inhere: Starts the search in the inhere directory.
+- type f: Looks for regular files.
+- ! -executable: Excludes executable files.
+- size 1033c: Searches for files that are exactly 1033 bytes (c stands for bytes).
+- exec file {} \;: For each file found, run the file command to determine its type (human-readable text).
+- grep 'ASCII': Filters the files that are human-readable (ASCII text).
+- cut -d: -f1: Extracts just the filenames from the file output.
+- xargs cat: Passes the filenames to cat to display the contents of the file.
+
+with the last command we can get the password present in the file 7 directly from the terminal
+
+password : 
+```bash
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+```
+## level 6 to level 7
+>Command 
+```bash    
+ssh bandit7@bandit.labs.overthewire.org -p 2220
+ls
+
