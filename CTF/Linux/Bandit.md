@@ -174,3 +174,19 @@ dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 >Command 
 ```bash    
 ssh bandit9@bandit.labs.overthewire.org -p 2220
+sort data.txt | uniq -u
+``` 
+![alt text](image-5.png)
+
+Explination : 
+- sort data.txt → sort the data.txt file
+- uniq -u → remove duplicate lines
+
+password : 
+```bash 
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+``` 
+## level 9 to level 10
+>Command 
+```bash    
+ssh bandit10@bandit.labs.overthewire.org -p 2220
