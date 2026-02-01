@@ -5,7 +5,9 @@ level 0
 Command : 
 ssh bandit0@bandit.labs.overthewire.org -p 2220 : 
 p for port /ssh is secure shell/ bandit0 is the user/bandit.labs.oberthewite.org is the host
-
+------------------------------
+![alt text](image.png)
+---------------------------------------------------------
 level 0 - 1 : 
 password for bandit1 : ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 command: 
