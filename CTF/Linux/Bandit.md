@@ -157,4 +157,20 @@ morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 ``` 
 ## level 7 to level 8
 >Command 
+```bash    
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+grep millionth data.txt
+```
+![alt text](image-4.png)
+
+Explination : 
+- grep millionth data.txt → search for the millionth line in the data.txt file
+
+password : 
 ```bash 
+dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+```
+## level 8 to level 9
+>Command 
+```bash    
+ssh bandit9@bandit.labs.overthewire.org -p 2220
