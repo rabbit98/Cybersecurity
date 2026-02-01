@@ -86,7 +86,25 @@ Explination :
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ``` 
 ## level 4 to level 5 
->Command
+>Command 
+```bash
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+ls  
+find . -type f -exec file {} \; | grep ASCII ./-file07: ASCII text
 
+bandit4@bandit:~/inhere$ find . -type f -exec file {} \; | grep ASCII | cut -d: -f1 | xargs cat
+```
+![alt text](image-1.png)
 
-
+Explination :
+- ls is for list
+- cd is for change directory
+- find . -type f -exec file {} \; | grep ASCII ./-file07: ASCII text to locate the file
+- find . -type f -exec file {} \; | grep ASCII | cut -d: -f1 | xargs cat
+- ./-file07 is the file to be read from the list of files
+with the last command we can get the password present in the file 7 directly from the terminal
+password : 
+```bash     
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+```
+## level 5 to level 6
