@@ -190,3 +190,47 @@ password :
 >Command 
 ```bash    
 ssh bandit10@bandit.labs.overthewire.org -p 2220
+strings data.txt | grep "^==="
+```
+![alt text](image-6.png)
+
+Explination : 
+- strings data.txt → extract strings from the data.txt file
+- grep "^===" → search for lines that start with "==="
+
+password : 
+```bash 
+FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+``` 
+## level 10 to level 11
+>Command 
+```bash    
+ssh bandit11@bandit.labs.overthewire.org -p 2220  
+base64 -d data.txt
+```
+![alt text](image-7.png)
+
+Explination : 
+- base64 -d data.txt → decode the base64 data.txt file
+- -d for decode
+
+password : 
+```bash 
+dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+``` 
+## level 11 to level 12
+>Command 
+```bash    
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+![alt text](image-8.png)
+
+Explination : 
+- cat data.txt → read the data.txt file
+- tr 'A-Za-z' 'N-ZA-Mn-za-m' → translate the characters A-Za-z to N-ZA-Mn-za-m
+
+password : 
+```bash 
+7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+``` 
