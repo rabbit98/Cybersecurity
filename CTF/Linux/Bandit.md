@@ -234,3 +234,46 @@ password :
 ```bash 
 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 ``` 
+## level 12 to level 13
+>Command  
+```bash    
+ssh bandit13@bandit.labs.overthewire.org -p 2220
+cd /tmp
+mktemp -d
+cd /tmp/tmp.ABC123xyz
+cp ~/data.txt .
+xxd -r data.txt > data
+file data
+data: gzip compressed data
+
+mv data data.gz
+gunzip data.gz
+
+mv data data.bz2
+bunzip2 data.bz2
+
+mv data data.tar
+tar -xf data.tar
+
+cat data
+```
+
+Explination : 
+- cd /tmp → change directory to /tmp
+- mktemp -d → create a temporary directory
+- cd /tmp/tmp.ABC123xyz → change directory to the temporary directory
+- cp ~/data.txt . → copy the data.txt file to the temporary directory
+- xxd -r data.txt > data → decode the data.txt file
+- file data → identify the file type
+- mv data data.gz → rename the data file to data.gz
+- gunzip data.gz → decompress the data.gz file
+- mv data data.bz2 → rename the data file to data.bz2
+- bunzip2 data.bz2 → decompress the data.bz2 file
+- mv data data.tar → rename the data file to data.tar
+- tar -xf data.tar → extract the data.tar file
+- cat data → read the data file
+
+password : 
+```bash 
+
+ 
