@@ -265,6 +265,7 @@ Explination :
 - cp ~/data.txt . → copy the data.txt file to the temporary directory
 - xxd -r data.txt > data → decode the data.txt file
 - file data → identify the file type
+- gzip → bzip2 → gzip → tar → gzip → tar → bzip2 → ASCII
 - mv data data.gz → rename the data file to data.gz
 - gunzip data.gz → decompress the data.gz file
 - mv data data.bz2 → rename the data file to data.bz2
@@ -272,8 +273,17 @@ Explination :
 - mv data data.tar → rename the data file to data.tar
 - tar -xf data.tar → extract the data.tar file
 - cat data → read the data file
+- repeat the steps until the password is found
+
+![alt text](image-9.png)
 
 password : 
 ```bash 
+FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+``` 
+## level 13 to level 14
+>Command 
+```bash    
+ssh bandit14@bandit.labs.overthewire.org -p 2220
 
  
