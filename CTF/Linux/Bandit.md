@@ -285,5 +285,59 @@ FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 >Command 
 ```bash    
 ssh bandit14@bandit.labs.overthewire.org -p 2220
+scp -P 2220 bandit13@bandit.labs.overthewire.org:~/sshkey.private ~/
+chmod 600 ~/sshkey.private
+ls -l ~/sshkey.private  
+ssh -i /home/kali/sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+cat /etc/bandit_pass/bandit14
+``` 
+Explination :
+- 1st logged out from level 13
+- use whoami to get the username then
+- use scp to copy the private key to the current directory [-P 2220 bandit13@bandit.labs.overthewire.org:~/sshkey.private ~/]
+- use chmod to change the permissions of the private key to 600
+- use ls to check the permissions of the private key
+- use ssh to login to level 14 with the private key
+- use cat to read the password
+
+password : 
+```bash 
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+```
+## level 14 to level 15
+>Command 
+```bash 
+nc localhost 30000  
+cat /etc/bandit_pass/bandit14
+```
+Explination : 
+- nc localhost 30000 → connect to localhost on port 30000
+- it shows a blank screen then we have to type the password
+![alt text](image-11.png)
+
+password : 
+```bash 
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo    
+``` 
+## level 15 to level 16
+>Command 
+```bash 
+ssh bandit16@bandit.labs.overthewire.org -p 2220    
+openssl s_client -connect localhost:30001
+```
+Explination : 
+- ssh bandit16@bandit.labs.overthewire.org -p 2220 → login to level 16
+- openssl s_client -connect localhost:30001 → connect to localhost on port 30001
+- it shows a blank screen then we have to type the password
+![alt text](image-12.png)
+
+password : 
+```bash 
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+```
+## level 16 to level 17
+>Command 
+```bash 
+ssh bandit17@bandit.labs.overthewire.org -p 2220
 
  
