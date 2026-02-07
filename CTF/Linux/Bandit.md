@@ -356,6 +356,7 @@ Explination :
 - -p is the ports to be scanned
 - localhost is the host to be scanned
 - <port> is the port to be scanned
+
  ![alt text](image-13.png)
 
 - openssl s_client -connect localhost:31790 → connect to localhost on port 31790
