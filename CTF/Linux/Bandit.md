@@ -370,20 +370,43 @@ Explination :
 - bandit17@bandit.labs.overthewire.org is the host
 - 2220 is the port
 - with this we are logging into bandit 17
+- to read the 17b password we have to run the command ' 'cat /etc/bandit_pass/bandit17'
+
+password : 
+```bash 
+EReVavePLFHtFlFsjn3hyzMlvSuSAcRD password for bandit 17
+```
+## level 17 to level 18
+>Command 
+```bash 
+ls
+diff password.old password.new
+
+```
+![alt text](image-14.png)
+
+![alt text](image-15.png)
+
+Explination :
+- ls is for listing the files
+- diff is for comparing the files
+- password.old is the old file
+- password.new is the new file
+- > this indicted key is the password for bandit 18
 
 password : 
 ```bash 
 x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
 ```
-## level 17 to level 18
+## level 18 to level 19
 >Command 
 ```bash 
-ssh bandit18@bandit.labs.overthewire.org -p 2220
-
+ssh bandit19@bandit.labs.overthewire.org -p 2220
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
 ```
 
-![alt text](image-14.png)
-![alt text](image-15.png)
+
+
 
 
 
