@@ -401,10 +401,73 @@ x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
 ## level 18 to level 19
 >Command 
 ```bash 
-ssh bandit19@bandit.labs.overthewire.org -p 2220
+ssh bandit18@bandit.labs.overthewire.org -p 2220
 ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
 ```
+![alt text](image-16.png)
 
+Explination :
+- ssh bandit18@bandit.labs.overthewire.org -p 2220 this command will end up saying byebye from the bandit 18
+- ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme asks for a password then use [x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO]
+- cat readme will print the file that contains bandit19 password
+- it will give you another password use that for bandit 19
+
+password : 
+```bash 
+cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+```
+## level 19 to level 20
+>Command 
+```bash
+ssh bandit20@bandit.labs.overthewire.org -p 2220
+ls -l
+./bandit20-do cat /etc/bandit_pass/bandit20
+```
+![alt text](image-17.png)
+
+Explination :
+- SUID runs a program with the owner's permissions
+- it is also called as privilege escalation
+- it runs on the binary file
+- ls -l will print the list of files
+- ./bandit20-do Runs the special SUID program
+- cat is for read
+- /etc/bandit_pass/bandit20 is the file to be read from the list of files
+
+password : 
+```bash 
+0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+```
+## level 20 to level 21
+In termina #1
+>Command 
+```bash
+ssh bandit21@bandit.labs.overthewire.org -p 2220
+ls -l
+nc -lvp 4444
+```
+In termina #2
+>Command 
+```bash
+ssh bandit21@bandit.labs.overthewire.org -p 2220
+./suconnect 4444
+```
+![alt text](image-18.png)
+
+Explination :
+- ls -l will print the list of files
+- nc -lvp 4444 will listen on port 4444
+- nc is for netcat
+- lvp is for listen on port
+- ./suconnect 4444 will connect to port 4444
+- we send a connecting request from 1st terminal to another terminal 
+- after that we see the connected message from the 2nd terminal
+- then entering the bandit 20 password will give us the password for bandit 21
+
+password : 
+```bash     
+EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+```
 
 
 
