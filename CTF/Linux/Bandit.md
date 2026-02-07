@@ -339,5 +339,54 @@ kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 >Command 
 ```bash 
 ssh bandit17@bandit.labs.overthewire.org -p 2220
+nmap -p 31000-32000 localhost : <port>
+openssl s_client -connect localhost:31790
+```
+After getting the key from the ports we logged out from the bandit and used the kali to get into bandit 17
 
- 
+>Command 
+```bash 
+nano ~/bandit17.key
+chmod 600 ~/bandit17.key
+ls -l ~/bandit17.key
+ssh -i ~/bandit17.key bandit17@bandit.labs.overthewire.org -p 2220
+``` 
+Explination :
+- nmap is for network mapping
+- -p is the ports to be scanned
+- localhost is the host to be scanned
+- <port> is the port to be scanned
+ ![alt text](image-13.png)
+
+- openssl s_client -connect localhost:31790 → connect to localhost on port 31790
+- it shows a blank screen then we have to type the password 
+- nano is for editing the file
+- we will copy the key from the ports and paste it in the file [cnrl+o to save the file and cnrl+x to exit the nano editor]
+- chmod is for changing the permissions of the file
+- ls is for listing the file
+- ssh is for secure shell
+- -i is for identity file
+- bandit17@bandit.labs.overthewire.org is the host
+- 2220 is the port
+- with this we are logging into bandit 17
+
+password : 
+```bash 
+x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+```
+## level 17 to level 18
+>Command 
+```bash 
+ssh bandit18@bandit.labs.overthewire.org -p 2220
+
+```
+
+![alt text](image-14.png)
+![alt text](image-15.png)
+
+
+
+
+
+
+
