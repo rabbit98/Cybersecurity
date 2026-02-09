@@ -468,10 +468,64 @@ password :
 ```bash     
 EeoULMCra2q0dSkYj561DX7s1CpBuOBt
 ```
+## level 21 to level 22
+>Command 
+```bash
+ssh bandit22@bandit.labs.overthewire.org -p 2220
+cat /etc/cron.d/cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+```
+![alt text](image-19.png)
 
+Explination :
+- cat is for read
+- /etc/cron.d/cronjob_bandit22 is the file to be read from the list of files
+- /usr/bin/cronjob_bandit22.sh is the file to be read from the list of files
+- cronjob is a scheduler
+- cornjobs is for scheduling automated tasks
+- cronjob_bandit22 is the name of the scheduler
+- cronjob_bandit22.sh is the file to be executed by the scheduler
 
+![alt text](image-20.png)
 
+password : 
+```bash 
+tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
+```
+## level 22 to level 23
+>Command 
+```bash
+ssh bandit23@bandit.labs.overthewire.org -p 2220    
+cat /etc/cron.d/cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+echo "I am user bandit23" | md5sum
+cat /tmp/<hash code from previous command>
+```
+![alt text](image-21.png)
 
+Explination :
+- cat is for read
+- /etc/cron.d/cronjob_bandit23 is the file to be read from the list of files
+- /usr/bin/cronjob_bandit23.sh is the file to be read from the list of files
+- cronjob is a scheduler
+- cornjobs is for scheduling automated tasks
+- cronjob_bandit23 is the name of the scheduler
+- cronjob_bandit23.sh is the file to be executed by the scheduler
+- echo is for printing, it will print the "i am user bandit23" in md5sum format
+- md5sum is for hashing the message
+- /tmp/<hash code from previous command> is the file to be read from the list of files
+
+Password : 
+```bash 
+0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+```
+## level 23 to level 24
+>Command 
+```bash
+ssh bandit24@bandit.labs.overthewire.org -p 2220
+cat /etc/cron.d/cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh
+mktemp -d
 
 
 
