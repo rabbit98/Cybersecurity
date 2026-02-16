@@ -541,7 +541,7 @@ Explination :
 - cronjob_bandit24.sh is the file to be executed by the scheduler
 - ls is for listing the files
 - -ld /var/spool/bandit24 is the file to be read from the list of files
-- nano is for editing the file
+- nano is for editing the file, and create a file named get24.sh in the /tmp directory
 - /tmp/get24.sh is the file to be read from the list of files
 - chmod is for changing the permissions of the file
 - ln is for linking the file
@@ -553,6 +553,10 @@ Password :
 ```bash 
 gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
 ```
+## level 24 to level 25
+>Command 
+```bash
+ssh bandit25@bandit.labs.overthewire.org -p 2220
 
 
 
