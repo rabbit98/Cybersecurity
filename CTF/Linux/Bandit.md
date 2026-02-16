@@ -525,8 +525,27 @@ Password :
 ssh bandit24@bandit.labs.overthewire.org -p 2220
 cat /etc/cron.d/cronjob_bandit24
 cat /usr/bin/cronjob_bandit24.sh
-mktemp -d
-
+ls -ld /var/spool/bandit24
+nano /tmp/get24.sh
+chmod +x /tmp/get24.sh
+ln -s /tmp/get24.sh /var/spool/bandit24/get24.sh
+cat /tmp/bandit24_pass
+```
+Explination :
+- cat is for read
+- /etc/cron.d/cronjob_bandit24 is the file to be read from the list of files
+- /usr/bin/cronjob_bandit24.sh is the file to be read from the list of files
+- cronjob is a scheduler
+- cornjobs is for scheduling automated tasks
+- cronjob_bandit24 is the name of the scheduler
+- cronjob_bandit24.sh is the file to be executed by the scheduler
+- ls is for listing the files
+- -ld /var/spool/bandit24 is the file to be read from the list of files
+- nano is for editing the file
+- /tmp/get24.sh is the file to be read from the list of files
+- chmod is for changing the permissions of the file
+- ln is for linking the file
+- -s /tmp/get24.sh /var/spool/bandit24/get24.sh is the file to be read from the list of files
 
 ![alt text](image-22.png)
 
