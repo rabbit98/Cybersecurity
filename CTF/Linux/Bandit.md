@@ -528,6 +528,14 @@ cat /usr/bin/cronjob_bandit24.sh
 mktemp -d
 
 
+![alt text](image-22.png)
+
+Password : 
+```bash 
+gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+```
+
+
 
 
 
