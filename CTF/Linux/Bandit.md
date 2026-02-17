@@ -558,8 +558,51 @@ gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
 >Command 
 ```bash
 ssh bandit25@bandit.labs.overthewire.org -p 2220
+nc localhost 30002
+mkdir /tmp/brute
+cd /tmp/brute
+nano list.txt
+nano script.sh
+ls
+chmod +x script.sh
+./script.sh
+cat list.txt | nc localhost 30002
+```
+   
+
+Script : 
+```bash
+#!/bin/bash
+
+for i in {0..9} {0..9} {0..9} {0..9}
+do
+        echo "gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 $i" >> list.txt;
+done
+
+```
+
+Explination :
+- nc is for network communication
+- localhost is the host to be scanned
+- 30002 is the port to be scanned
+- mkdir is for creating a directory
+- /tmp/brute is the directory to be created
+- cd is for changing the directory
+- nano is for editing the file, and create a file named script.sh in the /tmp/brute directory
+- nano list.txt is the file to be read from the list of files
+- ls is for listing the files
+- chmod is for changing the permissions of the file
+- ./script.sh is the file to be executed by the shell
+- cat is for read
+- list.txt is the file to be read from the list of files 
 
 
 
-
-
+Password : 
+```bash
+iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
+```
+## level 25 to level 26
+>Command 
+```bash
+ssh bandit26@bandit.labs.overthewire.org -p 2220
