@@ -606,3 +606,4 @@ iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
 >Command 
 ```bash
 ssh bandit26@bandit.labs.overthewire.org -p 2220
+
