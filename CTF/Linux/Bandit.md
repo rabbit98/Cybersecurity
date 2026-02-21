@@ -670,3 +670,108 @@ Password :
 ```bash
 upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
 ```
+## level 27 to level 28
+>Command 
+```bash
+git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo
+ls
+cd repo
+cat readme
+```
+Explination :
+- git clone is for cloning the repository
+- ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo is the repository to be cloned
+- ls is for listing the files
+- cd is for changing the directory
+- cat is for read
+- readme is the file to be read from the list of files
+
+Explination :
+- after logged into the bandit 27 we are not able to clone the git repository, same as the level 26
+- so use the new terminal and insall the git repository
+- it creates a new directory called repo
+- then use cd to change the directory to repo
+- then use cat to read the readme file to get the password
+
+![alt text](image-26.png)
+
+Password : 
+```bash
+Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+```
+## level 28 to level 29
+>Command 
+```bash
+git clone ssh://bandit28-git@bandit.labs.overthewire.org:2220/home/bandit28-git/repo bandit28-repo
+ls
+cd bandit28-repo
+cat readme
+```
+![alt text](image-27.png)
+
+>Command 
+```bash
+git log
+git log -p
+```
+![alt text](image-28.png)
+
+Explination :
+- git clone is for cloning the repository
+- ssh://bandit28-git@bandit.labs.overthewire.org:2220/home/bandit28-git/repo is the repository to be cloned
+- ls is for listing the files
+- cd is for changing the directory
+- cat is for read
+- readme is the file to be read from the list of files
+with this we are not able to get the password and it shows user name and password as "XXX"
+- so we used git log command to get the commit history
+- then we used git log -p command to get the commit history with patches, there we got the password
+
+Password : 
+```bash
+4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7        
+```
+## level 29 to level 30
+>Command 
+```bash
+git clone ssh://bandit29-git@bandit.labs.overthewire.org:2220/home/bandit29-git/repo bandit29-repo
+ls
+cd bandit29-repo
+cat readme
+```
+we didnit find the password here
+
+![alt text](image-29.png)
+
+>command
+```bash
+git branch -a
+git checkout dev
+ls
+cat readme
+```
+![alt text](image-30.png)
+
+Explination :
+- git clone is for cloning the repository
+- ssh://bandit29-git@bandit.labs.overthewire.org:2220/home/bandit29-git/repo is the repository to be cloned
+- ls is for listing the files
+- cd is for changing the directory
+- cat is for read
+- readme is the file to be read from the list of files
+- git branch -a is for listing the branches
+- To see all the branches that exist in this repository (both local and remote)
+- To see the files inside that development branch, you need to "checkout" that branch. If the branch you saw was called dev, you need to checkout the dev branch.
+- git checkout dev is for checking out the branch
+- ls is for listing the files
+- cat is for read
+- readme is the file to be read from the list of files, we will get the password
+
+Password :
+```bash
+qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
+```
+## level 30 to level 31
+>Command 
+```bash
+
