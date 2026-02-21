@@ -655,4 +655,18 @@ Password :
 s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ
 ```
 ## level 26 to level 27
->Command
+>Command        
+```bash
+ls
+./bandit27-do cat /etc/bandit_pass/bandit27
+```
+Explination :
+- as we are in the bandit 26 we use ls command to list the files
+- ./bandit27-do Runs the special SUID program   
+- cat is for read
+- /etc/bandit_pass/bandit27 is the file to be read from the list of files, we got the password from this file
+
+Password : 
+```bash
+upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
+```
