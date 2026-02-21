@@ -606,4 +606,53 @@ iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
 >Command 
 ```bash
 ssh bandit26@bandit.labs.overthewire.org -p 2220
+ls
+cat bandit26.sshkey
+```
+Copy the key from the above command
 
+![alt text](image-23.png)
+
+Open the new terminal because the admins disabled the ability to SSH from localhost entirely so we are using a new terminal to copy and paste the key to change the permissions
+
+>command 
+```bash
+nano bandit26.key
+chmod 600 bandit26.key
+ssh -i bandit26.key bandit26@bandit.labs.overthewire.org -p 2220
+```
+before using this last command we have to shrink the terminal to short  or else we cant get the results. after entering the command we will see like more 33% then we have to use the below commands
+
+>command 
+```bash
+v no enter just v
+:set shell=/bin/bash press enter
+:shell press enter
+```
+Now we are in the bandit 26 shell
+
+![alt text](image-24.png)
+
+>command 
+```bash
+cat /etc/bandit_pass/bandit26
+```
+Explination :
+- we have the bandit26 key but we are not able to get the shell password
+- so 1st i copied the key and opened a new terminal
+- then i copied the key to the new terminal
+- then i changed the permissions of the key
+- then i logged into the bandit 26 shell using this command [ssh -i bandit26.key bandit26@bandit.labs.overthewire.org -p 2220]
+- then used the v command and entered into the visual editor mode 
+- then used this command [:set shell=/bin/bash] press enter
+[:shell] press enter
+- then used this command [cat /etc/bandit_pass/bandit26] to get the password
+
+![alt text](image-25.png)
+
+Password : 
+```bash 
+s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ
+```
+## level 26 to level 27
+>Command
