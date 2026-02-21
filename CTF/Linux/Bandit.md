@@ -774,4 +774,95 @@ qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
 ## level 30 to level 31
 >Command 
 ```bash
+git clone ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo bandit30-repo
+ls
+cd bandit30-repo
+cat readme
+git tag
+git show secret
+```
+![alt text](image-31.png)
 
+Explination :
+- git clone is for cloning the repository
+- ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo is the repository to be cloned
+- ls is for listing the files
+- cd is for changing the directory
+- cat is for read
+- readme is the file to be read from the list of files
+- In Git, developers use "tags" to permanently bookmark specific moments in time, usually for release versions (like v1.0 or v2.5). However, a tag is technically a Git object, which means it can have a message attached to it—and that message can contain sensitive data.
+- 'git tag' is for listing the tags
+- Now that you know the name of the tag, you can inspect it. The cat command doesn't work on Git objects, so you have to use Git's built-in tool for displaying them.
+- 'git show' secret is for showing the secret tag, we got the password
+
+Password : 
+```bash
+fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
+```
+## level 31 to level 32
+>Command 
+```bash
+git clone ssh://bandit31-git@bandit.labs.overthewire.org:2220/home/bandit31-git/repo bandit31-repo
+ls
+cd bandit31-repo
+cat readme
+```
+![alt text](image-32.png)
+
+>command
+```bash
+echo "May I come in?" > key.txt
+git add -f key.txt
+git commit -m "Uploading the key"
+git config user.email "bandit@example.com"
+git config user.name "Bandit Player"
+git commit -m "Adding the requested key"
+git push
+```
+![alt text](image-33.png)
+
+Explination :
+- git clone is for cloning the repository
+- ssh://bandit31-git@bandit.labs.overthewire.org:2220/home/bandit31-git/repo is the repository to be cloned
+- ls is for listing the files
+- cd is for changing the directory      
+- cat is for read
+- readme is the file to be read from the list of files
+- echo "May I come in?" > key.txt is for creating a file    
+- If you try to add the file to Git normally (git add key.txt), Git will likely throw an error saying the file is ignored.
+- To bypass this restriction and force Git to track the file anyway, use the -f (force) flag
+- git add -f key.txt is for adding the file
+- git commit -m "Uploading the key" is for committing the file, this will ask you for the username and email
+- git config user.email "bandit@example.com" is for setting the email
+- git config user.name "Bandit Player" is for setting the name
+- git commit -m "Adding the requested key" is for committing the file
+- git push is for pushing the file, we will get the password
+
+Password : 
+```bash
+3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+```
+## level 32 to level 33
+
+After logging into the bandit 32, ls command will not work
+
+>Command 
+```bash 
+$0
+cat /etc/bandit_pass/bandit33
+```
+![alt text](image-34.png)
+
+Explination :
+- ls will not work as we are in the bandit 32 shell
+- You need to run a command that doesn't use any alphabet letters, so the uppercase conversion doesn't ruin it. In Linux, the variable $0 stands for the name of the program currently running.
+- $0 is for getting the name of the program
+- Because $0 contains no letters, it bypasses the uppercase filter. The system expands it to your default shell (usually /bin/sh or /bin/bash) and drops you into a normal, functioning command prompt.
+- Now that you have your lowercase letters back, simply read the password file for the next user:
+- cat /etc/bandit_pass/bandit33 is for reading the password
+
+Password : 
+```bash
+tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0
+```
+![alt text](image-35.png)
