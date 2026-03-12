@@ -339,14 +339,27 @@ ssh bandit17@bandit.labs.overthewire.org -p 2220
 nmap -p 31000-32000 localhost : <port>
 openssl s_client -connect localhost:31790
 ```
-After getting the key from the ports we logged out from the bandit and used the kali to get into bandit 17
+or 
+>Command 
+```bash 
+openssl s_client -connect localhost:31790 -quiet
+```
+After getting the key from the ports we logged out from the bandit and used the kali to get into bandit 17, Create a file named bandit17.key in the home directory using the below commands
+Create your own temporary folder:
+>Command 
+```bash
+mkdir /tmp/bhanu_workspace
+cd /tmp/bhanu_workspace
+chmod 600 ~/bandit17.key
+```
+Save the key in the folder using nano command
 
 >Command 
 ```bash 
 nano ~/bandit17.key
 chmod 600 ~/bandit17.key
 ls -l ~/bandit17.key
-ssh -i ~/bandit17.key bandit17@bandit.labs.overthewire.org -p 2220
+ssh -i bandit17.key bandit17@bandit.labs.overthewire.org -p 2220
 ``` 
 Explination :
 - nmap is for network mapping
