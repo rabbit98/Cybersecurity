@@ -422,6 +422,8 @@ ssh bandit18@bandit.labs.overthewire.org -p 2220
 ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
 ```
 ![alt text](image-16.png)
+![alt text](image-36.png)
+
 
 Explination :
 - ssh bandit18@bandit.labs.overthewire.org -p 2220 this command will end up saying byebye from the bandit 18
