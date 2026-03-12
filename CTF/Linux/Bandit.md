@@ -357,8 +357,9 @@ Save the key in the folder using nano command
 >Command 
 ```bash 
 nano ~/bandit17.key
-chmod 600 ~/bandit17.key
-ls -l ~/bandit17.key
+```
+>Command 
+```bash
 ssh -i bandit17.key bandit17@bandit.labs.overthewire.org -p 2220
 ``` 
 Explination :
@@ -381,6 +382,12 @@ Explination :
 - 2220 is the port
 - with this we are logging into bandit 17
 - to read the 17b password we have to run the command ' 'cat /etc/bandit_pass/bandit17'
+
+- for creating the file we have to run the command 'mkdir /tmp/bhanu_workspace'
+- cd
+
+- After getting the key copy it and create a file using nano command and save it and change the permissions using chmod then run the command 'ssh -i bandit17.key bandit17@bandit.labs.overthewire.org -p 2220' to get into banidt17 
+
 
 password : 
 ```bash 
